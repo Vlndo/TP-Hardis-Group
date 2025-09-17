@@ -1,10 +1,10 @@
 import requests
 import argparse
-import sys
 
 # Premier exo :
 def http_get() -> dict : 
     r = requests.get('https://dummyjson.com/products')
+    print("------------------------Début EXO 1--------------------------")
     print(f"Code de retour obtenu : {r.status_code}")
     if r.status_code != 200: # si le r.status_code est différent de 200 alors on affiche le message d'erreur suivant et le code d'erreur
         raise Exception(f"Erreur HTTP : {r.status_code}")
@@ -12,6 +12,7 @@ def http_get() -> dict :
 
 data = http_get()
 print(f"Nombre de retour pour la requete get : {len(data['products'])}")
+print("------------------------Fin EXO 1--------------------------")
 
 
 # Deuxième exo
@@ -27,7 +28,31 @@ def parse_command_line_args():
 
 if __name__ == "__main__":
     args = parse_command_line_args()
+    print("------------------------Début EXO 2--------------------------")
     print(f"Protocol : {args.protocol}")
     print(f"Hostname : {args.hostname}")
     print(f"URI : {args.uri}")
     print(f"Threshold : {args.threshold}")
+    print("------------------------Fin EXO 2--------------------------")
+
+
+# Exo 3
+def format_url(protocol:str, hostname:str, uri:str) -> str:
+    print("------------------------Début EXO 3--------------------------")
+    if protocol not in ("http", "https"):
+        raise Exception(f"Protocole invalide : {protocol} est différent de http ou https")
+    
+    if not hostname or " " in hostname:
+        raise Exception(f"Hostname invalide : '{hostname}'")
+    
+    if not uri.startswith("/"):
+        raise Exception(f"Uri invalide : doit commencé par un '/'")
+    
+    url = f"{protocol}://{hostname}{uri}"
+
+    return url
+
+print(f'Url final : {format_url("https","google.com","/fr")}')
+print("------------------------Fin EXO 3--------------------------")
+
+# Exo 5
