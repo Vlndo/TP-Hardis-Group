@@ -14,3 +14,8 @@ J'ai utilisé github pour gérer le projet, je fonctionnerai de la manière suiv
 
 ## Sonarqube
 J'utiliserai sonarqube avant chaque push afin d'entrer en phase d'optimisation de code.
+
+## Tests 
+Exo 1 : python main.py
+
+Exo 2 : python my_package/main.py --protocol http --hostname example.com --uri /api/data --threshold 10

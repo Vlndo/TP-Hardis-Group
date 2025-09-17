@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "vlndo",
+        "projectKey": "projet-tp-python"
+    }
+}
