@@ -18,6 +18,10 @@ J'utiliserai sonarqube avant chaque push afin d'entrer en phase d'optimisation d
 ## Tests 
 Exo 1 : python my_package/main.py
 
-Exo 2, 3, 5, 7, 8, 9: python my_package/main.py --protocol http --hostname example.com --uri /api/data --threshold 10
+Exo 2, 3, 5, 7 , 9: 
+python my_package/main.py --protocol https --hostname dummyjson.com --uri //products --threshold 10
 
 Exo 4 et 6: python -m unittest discover -s tests
+
+Exo 8 : 
+python my_package/main.py --protocol https --hostname google.fr:9443 --uri // --threshold 1

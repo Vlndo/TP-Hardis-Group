@@ -47,7 +47,7 @@ class TestThresholdExceededException(unittest.TestCase):
             str(context.exception), 
             "Temps d'exécution de 3.00s dépassé (seuil: 2s)."
             )
-
+    
 
 if __name__ == "__main__":
     unittest.main()
